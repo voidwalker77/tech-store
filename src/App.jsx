@@ -1,10 +1,12 @@
-function App() {
+import Header from './design-system/components/header/Header'
+
+export default function App() {
 
 	return (
-		<div className="App">
-			<h1>Olá.</h1>
+		<div>
+			<Header />
 		</div>
 	)
 }
 
-export default App
+
