@@ -22,7 +22,7 @@ export default function NavbarComponent (props) {
                             )
                         })
                     }
-                    <button className="Button btn2">Our Deals</button>
+                    <button className="Button btn2">Our Deals!</button>
                 </nav>
             }                        
         </>
