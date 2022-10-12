@@ -1,6 +1,8 @@
 import { StyledSubHeaderNav, StyledHeader } from './styled'
 import { useState } from 'react'
-import NavbarComponent from './navbar'
+import NavbarComponent from './Navbar'
+import HamburgerMenu from './HamburgerMenu'
+
 import DropdownClock from '../../utils/theme/img/bx_bx-time.svg'
 import ArrowDown from '../../utils/theme/img/arrowdown.svg'
 import Logo from '../../utils/theme/img/Logo.svg'
@@ -13,17 +15,58 @@ import UserIcon from '../../utils/theme/img/UserIcon.svg'
 
 export default function Header() {
     const [isActive, setIsActive] = useState(false)
+    const [menuIsVisible, setMenuIsVisible] = useState(true)
     
+    const handleSearchBar = () => {
+        isActive ? setIsActive(false) : setIsActive(true)
+    }
+
     const navbar = () => {
         if (isActive === false) {
             return (
-                <NavbarComponent logo={<img src={Logo}/>}/>
+                <NavbarComponent logo={<a href="home"><img className="Logo" src={Logo}/></a>}/>
             )
         }
         else if (isActive === true) {
             return (<img src={Logo}/>)
         }
+    }
+
+    const handleScreenSize = () => {
+		const fullWidth = window.innerWidth
+		
+		if (fullWidth > 1024) {
+			return (
+                <>
+                    {navbar()}
+                    <div className="user-area">
+                        <div className={isActive ? "search-box active" : "search-box"}>
+                            <input className={isActive ? "input-alpha active" : "input-alpha"} type="text" placeholder="Type to search.." />
+                            <div className={isActive ? "search-icon active" : "search-icon"}
+                                onClick={() => handleSearchBar()}>
+                                <img src={SearchIcon} />
+                            </div>
+                        </div>
+
+                        <a><img className="Carrito" src={Carrito} /></a>
+                        <img className='user-icon' src={UserIcon} />
+                    </div>
+                </>
+            )
+		}
+        else if (fullWidth <= 1024) {
+            return(
+                <>
+                    <a href="home"><img className="Logo" src={Logo}/></a>
+                    <HamburgerMenu 
+                        menuIsVisible={menuIsVisible}
+                        setMenuIsVisible={setMenuIsVisible} 
+                    /> 
+                </>
+            )
         }
+	}
+    
     return (
         <>
             <StyledSubHeaderNav>
@@ -56,31 +99,7 @@ export default function Header() {
             <StyledHeader>
                 <div className="Container">
                     <div className="Header">
-                        {navbar()}
-                        <div className="user-area">
-                            {/* <div className="search-box">
-                                <input type="text" placeholder='Search entire store here...' />
-                                <div className="Search-Icon" >
-                                    <img src={SearchIcon} />
-                                </div>
-                                <div className="cancel-button">
-                                    <img src={SearchCancel} />
-                                </div>
-                            </div> */}
-                            <div className={isActive ? "search-box active" : "search-box"}>
-                                <input className={isActive ? "input-alpha active" : "input-alpha"} type="text" placeholder="Type to search.." />
-                                <div className={isActive ? "search-icon active" : "search-icon"}
-                                    onClick={() => setIsActive(true)}>
-                                    <img src={SearchIcon} />
-                                </div>
-                                {/* <div className="cancel-icon" >
-                                    <img src={SearchCancel} />
-                                </div> */}
-                            </div>
-
-                            <a><img className="Carrito" src={Carrito} /></a>
-                            <img className='user-icon' src={UserIcon} />
-                        </div>
+                        {handleScreenSize()}
                     </div>
                 </div>
             </StyledHeader>

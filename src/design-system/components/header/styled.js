@@ -6,9 +6,8 @@ import {
 
 export const StyledSubHeaderNav = styled.nav `
     width: 100vw;
-
     padding-inline: 8rem;
-    background: #020202;
+    background-color: #020202;
     box-shadow: 0 0.4rem 0.4rem rgba(0,0,0, 0.25);
     display: flex;
     align-items: center;
@@ -89,6 +88,7 @@ export const StyledSubHeaderNav = styled.nav `
     .sub-menu-1{
         display: none;
         user-select: none;
+        z-index: 100;
         box-shadow: 0.2rem 0.2rem 1rem rgba(0,0,0, 0.25);
     }
 
@@ -124,10 +124,20 @@ export const StyledSubHeaderNav = styled.nav `
         cursor: default;
         -webkit-user-drag: none;
     }
+    
+    @media (max-width: 900px) {
+        nav, p, a {
+            font-size: 1rem;
+        }
+      
+        padding-inline: 2rem;
+        
+    }
 `
 export const StyledHeader = styled.div `
     .Header {
         height: 9.2rem;
+        max-width: 100vw;
         background-color: #fff;
         border-bottom: 2px solid #CACDD8;
 
@@ -146,24 +156,28 @@ export const StyledHeader = styled.div `
     }
 
     .Header img{
-        margin-right: 1.2rem;
+        padding-right: 1.2rem;
         margin-left: 1.2rem;
+    }
+
+    .Logo {
+        width: 10rem;
     }
 
     .Header nav a, .Button{
         color: #000;
         font-weight: 600;
         font-size: 1.4rem;
-        line-height: 2.1rem;
+        line-height: 1.1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-left: 2.25rem;
+        padding-block: 1rem;
+        padding-inline: .5rem;
         transition: transform .2s; /* Animation */
     }
     .Header nav a:hover {
-        padding-block: 1rem;
-        padding-inline: .5rem;
         transform: scale(1.2);
         transition: .1s;
         color: ${Colors.defaultBlue};
@@ -196,40 +210,15 @@ export const StyledHeader = styled.div `
         cursor: pointer
     }
 
-    /* .Header .search-box {
-        height: 6rem;
-        width: 35rem;
-    }
-    .Header .search-box input {
-        height: 100%;
-        width: 100%;
-        border: none;
-        background: ${Colors.searchBarBackground};
-        font-size: 1.4rem;
-        border-radius: .5rem;
-        outline: none;
-        padding: 0 6rem 0 2rem;
-    }
-    .Header .search-box .Search-Icon {
-        height: 5rem;
-        width: 5rem;
-        position: absolute;
-        top: 50%;
-        right: .5rem;
-        transform: translateY(-50%);
-        line-height: 5rem;
-    } */
-
     .search-box{
         position: relative;
         height: 60px;
         width: 60px;
         border-radius: 50%;
-        
         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
     .search-box.active{
-        width: 105rem;
+        width: 70vw;
     }
     .search-box input{
         width: 100%;
@@ -240,15 +229,12 @@ export const StyledHeader = styled.div `
         padding: 0 60px 0 20px;
         font-size: 18px;
         opacity: 0;
-        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
     .search-box input.active{
         opacity: 1;
         background: ${Colors.searchBarBackground};
     }
-    .search-box input::placeholder{
-        color: #a6a6a6;
-    }
+
     .search-box .search-icon{
         position: absolute;
         right: 0px;
@@ -261,7 +247,6 @@ export const StyledHeader = styled.div `
         font-size: 22px;
         cursor: pointer;
         z-index: 1;
-        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
     .search-box .search-icon.active{
         right: 5px;
@@ -271,21 +256,48 @@ export const StyledHeader = styled.div `
         font-size: 20px;
         background: none;
         color: #fff;
-        transform: translateY(-50%) rotate(360deg);
     }
-    .search-box .cancel-icon{
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 25px;
-        color: #fff;
-        cursor: pointer;
-        transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    @media (max-width: 900px) {
+        .Header {
+            height: 6.2rem;
+        }
+
+        .Header nav a{
+            font-size: 1.1rem;
+        }  
+
+        .Header img{
+            margin-right: 0rem;
+            margin-left: 0rem;
+        }
+
+        .Header .Button {
+            height: 1.7rem;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            padding: 1.6rem 1.8rem;
+        } 
+
+        .Header nav a, .Button{
+
+            margin-left: .75rem;
+        }
+
+        .input-alpha.active {
+            font-size: 1.2rem;
+        }
+        .search-box.active{
+            height: 4.5rem;
+        }
     }
-    .search-box .cancel-icon.active{
-        right: -40px;
-        transform: translateY(-50%) rotate(360deg);
+
+    @media (max-width: 1024px) {
+        .Header .Logo {
+            width: 8rem;
+        }
     }
 `
+export const StyledContainer = styled.section`
 
+`
