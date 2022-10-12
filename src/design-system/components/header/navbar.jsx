@@ -1,4 +1,3 @@
-
 export default function NavbarComponent (props) {
     
     const navbarLinks = [
