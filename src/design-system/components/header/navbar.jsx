@@ -11,7 +11,6 @@ export default function NavbarComponent (props) {
     ]
 
     return (
-
         <>  
             {props.logo}
             {   
