@@ -3,6 +3,7 @@ import { useState } from 'react'
 import NavbarComponent from './Navbar'
 import HamburgerMenu from './HamburgerMenu'
 
+import { RiMenu3Fill } from 'react-icons/ri'
 import DropdownClock from '../../utils/theme/img/bx_bx-time.svg'
 import ArrowDown from '../../utils/theme/img/arrowdown.svg'
 import Logo from '../../utils/theme/img/Logo.svg'
@@ -15,7 +16,7 @@ import UserIcon from '../../utils/theme/img/UserIcon.svg'
 
 export default function Header() {
     const [isActive, setIsActive] = useState(false)
-    const [menuIsVisible, setMenuIsVisible] = useState(true)
+    const [menuIsVisible, setMenuIsVisible] = useState(false )
     
     const handleSearchBar = () => {
         isActive ? setIsActive(false) : setIsActive(true)
@@ -57,7 +58,15 @@ export default function Header() {
         else if (fullWidth <= 1024) {
             return(
                 <>
-                    <a href="home"><img className="Logo" src={Logo}/></a>
+                    <a href="home" ><img className="Logo" src={Logo}/></a>
+                    <div className={isActive ? "search-box active" : "search-box"}>
+                            <input className={isActive ? "input-alpha active" : "input-alpha"} type="text" placeholder="Type to search.." />
+                            <div className={isActive ? "search-icon active" : "search-icon"}
+                                onClick={() => handleSearchBar()}>
+                                <img src={SearchIcon} />
+                            </div>
+                        </div>
+                    <RiMenu3Fill onClick={() => setMenuIsVisible(true)} className="mobile" />
                     <HamburgerMenu 
                         menuIsVisible={menuIsVisible}
                         setMenuIsVisible={setMenuIsVisible} 
