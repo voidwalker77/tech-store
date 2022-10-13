@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
     Colors
 } from '../../utils/theme/colors'
@@ -88,7 +88,7 @@ export const StyledSubHeaderNav = styled.nav `
     .sub-menu-1{
         display: none;
         user-select: none;
-        z-index: 100;
+        z-index: 110;
         box-shadow: 0.2rem 0.2rem 1rem rgba(0,0,0, 0.25);
     }
 
@@ -258,14 +258,21 @@ export const StyledHeader = styled.div `
         color: #fff;
     }
 
+    .mobile {
+        cursor: pointer;
+        margin-inline: 2rem;
+    }
+
     @media (max-width: 900px) {
         .Header {
             height: 6.2rem;
         }
 
         .Header nav a{
-            font-size: 1.1rem;
-        }  
+            font-size: 2rem;
+            width: 60vw;
+            padding-block: 2rem;
+        }
 
         .Header img{
             margin-right: 0rem;
@@ -274,14 +281,14 @@ export const StyledHeader = styled.div `
 
         .Header .Button {
             height: 1.7rem;
-            font-size: 1.3rem;
+            font-size: 3rem;
             line-height: 1.5rem;
-            padding: 1.6rem 1.8rem;
+            padding: 3.3rem 2.9rem;
         } 
 
         .Header nav a, .Button{
 
-            margin-left: .75rem;
+            margin-left: 0rem;
         }
 
         .input-alpha.active {
@@ -296,8 +303,81 @@ export const StyledHeader = styled.div `
         .Header .Logo {
             width: 8rem;
         }
+
+        .Header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-inline: 0rem;
+            padding-inline: 0rem;
+        }
+
+        .Header nav a {
+            color: ${Colors.whiteText};
+        }
     }
 `
 export const StyledContainer = styled.section`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
 
-`
+    background: ${Colors.mobile.background};
+
+    opacity: 0;
+    pointer-events: none;
+
+
+    transition: .7s;
+    transform: translateY(10rem);
+    
+    > svg {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: ${Colors.whiteText};
+        transform: rotate(75deg);
+        transition: .7s;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .5rem;
+        transform: scale(0.3);
+        transition: .7s;
+    }
+    nav a, button{
+        transform: translateY(130px);
+        transition: .7s;
+    }
+    
+    ${({ isVisible }) => isVisible && css`
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0rem);
+
+        > svg {
+            transform: rotate(0deg);
+        }
+
+        nav {
+            transform: scale(1);
+        }
+        nav a, button {
+            transform: translateY(0px);
+        }
+
+    `}
+`;

@@ -5,4 +5,8 @@ export const Colors = {
     defaultBlue: "#0156FF",
     searchBarBackground: "#e7eaf1",
     greyLine: "#CACDD8",
+
+    mobile: {
+        background: "hsla(0, 0%, 0%, 0.983)"
+    }
 }
