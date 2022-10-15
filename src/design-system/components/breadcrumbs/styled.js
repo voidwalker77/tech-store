@@ -1,12 +1,26 @@
 import styled from 'styled-components'
+import { Colors } from '../../utils/theme/colors'
 
 export const StyledBreadCrumbs = styled.section`
+    a {
+        color: black;
+        transition: transform .5s;
+    }
+    a:hover {
+        color: ${Colors.defaultBlue};
+        transition: .5s;
+    }
+    a:active {
+        transform: scale(1.4);
+        transition: .5s;
+    }
 
-    .breadcrumbs {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        flex-direction: row;
-        margin-top: 2.1rem;
+    div {
+    display: flex;
+    justify-content: left;
+    padding-inline: 8rem;
+    align-items: center;
+    flex-direction: row;
+    margin-block: 2.1rem;
     }
 `;
