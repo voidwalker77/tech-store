@@ -76,6 +76,19 @@ export const StyledSection = styled.section`
     }
 
     @media (max-width: 1024px) {
+        
+        
+        .black {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            margin-bottom: 12rem;
+            gap: 5rem;
+        }
+        
         img {
             max-width: 40%;
         }
@@ -91,6 +104,9 @@ export const StyledSection = styled.section`
             font-size: 2.8rem;
         }
         
+        .container {
+            gap: 0rem;
+        }
         
         .text-container {
             width: 44%;
@@ -102,6 +118,7 @@ export const StyledSection = styled.section`
     }
 
     @media (max-width: 768px) {
+
         .container {
             flex-direction: column;
         }
