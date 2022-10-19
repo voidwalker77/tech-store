@@ -18,7 +18,7 @@ export const StyledBreadCrumbs = styled.section`
     div {
     display: flex;
     justify-content: left;
-    padding-inline: 8rem;
+    padding-inline: 6vw;
     align-items: center;
     flex-direction: row;
     margin-block: 2.1rem;

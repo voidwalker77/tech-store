@@ -1,0 +1,121 @@
+import styled from 'styled-components'
+import {
+    Colors
+} from '../../../utils/theme/colors'
+
+export const StyledSection = styled.section`
+
+    .main-title {
+        font-size: 3.2rem;
+        margin-inline: 5.5vw;
+    }
+
+    /* ---> black section <--- */
+    .black {
+        background: ${Colors.black};
+        padding-inline: 0;
+        height: 100vh;
+        margin-top: 2.1rem;
+
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 46.5rem;
+    }
+    .text-container > p {
+        color: ${Colors.whiteText};
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    .black-screen--title {
+        color: ${Colors.whiteText};
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 5rem;
+        margin-top: 12.1rem;
+    }
+
+    img {
+        max-width: 60%;
+        max-height: 48.8rem;
+        margin-top: 6.6rem;
+    }
+
+    /* ---> white section <--- */
+    .black.white { 
+        background: white;
+        margin-top: auto;
+
+    }
+
+    .container.white {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    
+    .text-container.white {
+        color: ${Colors.black};
+    }
+    .text-container.white > p {
+        color: ${Colors.black};
+    }
+    
+    .black-screen--title.white {
+        color: ${Colors.black};
+        height: auto;
+    }
+
+    @media (max-width: 1024px) {
+        img {
+            max-width: 40%;
+        }
+    }
+    
+    @media (max-width: 900px) {
+
+        .main-title {
+            font-size: 2.6rem;
+        }
+        
+        .black-screen--title {
+            font-size: 2.8rem;
+        }
+        
+        
+        .text-container {
+            width: 44%;
+        }
+
+        .text-container > p {
+            font-size: 1.4rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .container.white {
+            flex-direction: column;
+        }
+        
+        .text-container {
+            width: 80%;
+        }
+
+        img {
+            max-width: 35%;
+            margin-top: 2.2rem;
+        }
+    }
+`;
