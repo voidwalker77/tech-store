@@ -13,7 +13,7 @@ export default function AboutUs() {
             <Breadcrumbs />
             <StyledSection>
                 <h1 className="main-title">About Us</h1>
-                <section className="black">
+                <section className="black first--black-section">
                     <div className="container">
                         <div className="text-container">
                             <h1 className="black-screen--title">A Family That Keeps On Growing</h1>

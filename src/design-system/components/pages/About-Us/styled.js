@@ -11,18 +11,23 @@ export const StyledSection = styled.section`
     }
 
     /* ---> black section <--- */
+    .first--black-section {
+        margin-top: 2.1rem;
+    }
     .black {
         background: ${Colors.black};
         padding-inline: 0;
         height: 100vh;
-        margin-top: 2.1rem;
-
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
     
     .container {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        gap: 5rem;
     }
 
     .text-container {
