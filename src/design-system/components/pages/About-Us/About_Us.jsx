@@ -1,5 +1,6 @@
-import { StyledSection } from './styled'
+import { StyledSection, StyledCarouselContainer } from './styled'
 import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
+import Carousel from './Carousel/Carousel'
 import BlackScreenImg1 from '../../../utils/theme/img/AboutUs_BlackScreen_1.svg'
 import BlackScreenImg2 from '../../../utils/theme/img/AboutUs_BlackScreen_2.svg'
 import BlackScreenImg3 from '../../../utils/theme/img/AboutUs_BlackScreen_3.svg'
@@ -8,21 +9,25 @@ import BlackScreenImg5 from '../../../utils/theme/img/AboutUs_BlackScreen_5.svg'
 
 
 export default function AboutUs() {
+
+    
+
     return (
         <>
             <Breadcrumbs />
+
             <StyledSection>
                 <h1 className="main-title">About Us</h1>
                 <section className="black first--black-section">
                     <div className="container">
                         <div className="text-container">
                             <h1 className="black-screen--title">A Family That Keeps On Growing</h1>
-                            <p>We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.<br/><br/>
-                            Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.</p>
+                            <p>We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store.<br /><br />
+                                Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.</p>
                         </div>
                         <img src={BlackScreenImg1} />
                     </div>
-                </section>   
+                </section>
                 <section className="black white">
                     <div className="container white">
                         <div className="text-container white">
@@ -31,13 +36,13 @@ export default function AboutUs() {
                         </div>
                         <img src={BlackScreenImg2} />
                     </div>
-                </section>  
+                </section>
                 <section className="black">
                     <div className="container">
                         <div className="text-container">
                             <h1 className="black-screen--title">You're In Safe Hands</h1>
                             <p>Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™ i7 processor with the upmost computing power to bring you an unparalleled gaming experience. <br /><br />
-                            *Performance compared to i7-9700. Specs varies by model.
+                                *Performance compared to i7-9700. Specs varies by model.
                             </p>
                         </div>
                         <img src={BlackScreenImg3} />
@@ -61,8 +66,12 @@ export default function AboutUs() {
                         </div>
                         <img src={BlackScreenImg5} />
                     </div>
-                </section> 
+                </section>
             </StyledSection>
+
+            <StyledCarouselContainer>
+                <Carousel />
+            </StyledCarouselContainer>
         </>
     )
 }
