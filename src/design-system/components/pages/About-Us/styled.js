@@ -151,3 +151,10 @@ export const StyledCarouselContainer = styled.article`
     align-items: center;
     margin-top: 6rem;
 `
+
+export const StyledCardSection = styled.section`    
+    margin-top: 6.3rem;
+    height: 100%;
+    width: 100%;
+    background: ${Colors.carouselBackground};
+`

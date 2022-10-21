@@ -1,6 +1,7 @@
-import { StyledSection, StyledCarouselContainer } from './styled'
+import { StyledSection, StyledCarouselContainer, StyledCardSection } from './styled'
 import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
 import Carousel from './Carousel/Carousel'
+
 import BlackScreenImg1 from '../../../utils/theme/img/AboutUs_BlackScreen_1.svg'
 import BlackScreenImg2 from '../../../utils/theme/img/AboutUs_BlackScreen_2.svg'
 import BlackScreenImg3 from '../../../utils/theme/img/AboutUs_BlackScreen_3.svg'
@@ -72,6 +73,20 @@ export default function AboutUs() {
             <StyledCarouselContainer>
                 <Carousel />
             </StyledCarouselContainer>
+
+            <StyledCardSection>
+                aa
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </StyledCardSection>
         </>
     )
 }
