@@ -53,7 +53,9 @@ export const StyledCarousel = styled.main `
         border: 2px solid ${Colors.defaultBlue};
         border-radius: 50px;
         margin-top: 6.4rem;
-        z-index: 50;
+        z-index: 50000000;
+
+        position: relative;
         
         transition: .3s;
     }
