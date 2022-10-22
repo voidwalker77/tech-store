@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import {
     Colors
 } from '../../../utils/theme/colors'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const StyledSection = styled.section`
 
@@ -141,3 +143,18 @@ export const StyledSection = styled.section`
         }
     }
 `;
+
+export const StyledCarouselContainer = styled.article`
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+`
+
+export const StyledCardSection = styled.section`    
+    margin-top: 6.3rem;
+    height: 100%;
+    width: 100%;
+    background: ${Colors.carouselBackground};
+`
