@@ -153,8 +153,31 @@ export const StyledCarouselContainer = styled.article`
 `
 
 export const StyledCardSection = styled.section`    
-    margin-top: 6.3rem;
     height: 100%;
     width: 100%;
     background: ${Colors.carouselBackground};
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+
+    .subfooter-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-block: 6.1rem;
+        width: 26rem;
+
+        gap: 1.4rem;
+
+        text-align: center;
+    }
 `
+

@@ -12,7 +12,7 @@ export const StyledCarousel = styled.main `
 
     display: flex;
     justify-content: center;
-    box-shadow: .2rem .3rem .4rem rgba(0,0,0, 0.3);
+    box-shadow: .2rem 0rem .4rem rgba(0,0,0, 0.3);
 
 
     .container {

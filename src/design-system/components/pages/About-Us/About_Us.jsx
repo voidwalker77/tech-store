@@ -1,17 +1,25 @@
-import { StyledSection, StyledCarouselContainer, StyledCardSection } from './styled'
+import {
+    StyledSection,
+    StyledCarouselContainer,
+    StyledCardSection
+} from './styled'
 import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
 import Carousel from './Carousel/Carousel'
+import Footer from '../../footer/Footer'
 
 import BlackScreenImg1 from '../../../utils/theme/img/AboutUs_BlackScreen_1.svg'
 import BlackScreenImg2 from '../../../utils/theme/img/AboutUs_BlackScreen_2.svg'
 import BlackScreenImg3 from '../../../utils/theme/img/AboutUs_BlackScreen_3.svg'
 import BlackScreenImg4 from '../../../utils/theme/img/AboutUs_BlackScreen_4.svg'
 import BlackScreenImg5 from '../../../utils/theme/img/AboutUs_BlackScreen_5.svg'
+import Support from '../../../utils/theme/subfooter/Support.svg'
+import Account from '../../../utils/theme/subfooter/Account.svg'
+import Saving from '../../../utils/theme/subfooter/Saving.svg'
 
 
 export default function AboutUs() {
 
-    
+
 
     return (
         <>
@@ -75,18 +83,28 @@ export default function AboutUs() {
             </StyledCarouselContainer>
 
             <StyledCardSection>
-                aa
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+
+                <div className="wrapper">
+                    <div className="subfooter-card">
+                        <img src={Support} />
+                        <h3>Product Support</h3>
+                        <p>Up to 3 years on-site warranty available for your peace of mind.</p>
+                    </div>
+                    <div className="subfooter-card">
+                        <img src={Account} />
+                        <h3>Personal Account</h3>
+                        <p>With big discounts, free delivery and a dedicated support specialist.</p>
+                    </div>
+                    <div className="subfooter-card">
+                        <img src={Saving} />
+                        <h3>Amazing Savings</h3>
+                        <p>Up to 70% off new Products, you can be sure of the best price.</p>
+                    </div>
+                </div>
 
             </StyledCardSection>
+
+            <Footer />
         </>
     )
 }

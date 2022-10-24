@@ -45,25 +45,26 @@ export default function Carousel() {
                 display: "flex",
                 justifyContent: "flex-end",
                 alignItems: "center",
-                marginBlock: "-6.8rem"}}>
-            <ul style={{
-                display: "flex",
-                justifyContent: "flex-end",
-                alignItems: "center",    
+                marginBlock: "-6.8rem"
+            }}>
+                <ul style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
                 }}
                 >
                     {dots} </ul>
             </div>
         ),
         dotsClass: `slick-dots`
-        
+
     }
 
     return (
         <>
             <StyledCarousel>
                 <div className="container">
-                    
+
                     <Slider {...settings}>
                         <div className="container-slide">
                             <p>My first order arrived today in perfect condition.  From the time I sent a question about the item to making the purchase, to the shipping and now the delivery, your company, Tecs, has stayed in touch.  Such great service.  I look forward to shopping on your site in the future and would highly recommend it.</p>
@@ -79,7 +80,7 @@ export default function Carousel() {
                         </div>
                         <div className="container-slide">
                             <p>Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
-                            Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.</p>
+                                Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.</p>
                             <div className="author">
                                 <p>- Beltrano de tal</p>
                             </div>
@@ -91,7 +92,7 @@ export default function Carousel() {
                             </div>
                         </div>
                     </Slider>
-                    
+
                     <button className="carousel-button">Leave Us A Review</button>
                 </div>
             </StyledCarousel>
