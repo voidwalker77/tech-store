@@ -6,12 +6,14 @@ import {
 export const StyledFooter = styled.footer `
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    padding-block: 4rem;
+    padding-top: 4rem;
     flex-wrap: wrap;
 
     background-color: ${Colors.black};
     color: ${Colors.whiteText};
+
 
     .newsletter {
         width: 100%;
@@ -77,7 +79,10 @@ export const StyledFooter = styled.footer `
     .wrapper {
         display: flex;
         justify-content: space-around;
-        width: 100%;
+        width: 95%;
+
+        border-bottom: 1px solid #CACDD8;
+
     }
 
     .footer-item {
@@ -86,12 +91,16 @@ export const StyledFooter = styled.footer `
         flex-direction: column;
     }
 
-    a {
-        line-height: 2rem;
+    a, p {
+        line-height: 2.5rem;
         color: ${Colors.whiteText};
 
         font-weight: 400;
         font-size: 1.3rem;
+    }
+    .clipboard {
+        cursor: pointer;
+        color: ${Colors.linkBlue};
     }
 
     .footer-item h4 {
@@ -100,4 +109,28 @@ export const StyledFooter = styled.footer `
         font-weight: 700;
     }
 
+
+    .subfooter {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-block: 1.6rem;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer
+    }
+
+    .payment-methods {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer
+    }
+
+    .subfooter .copyright p {
+        color: ${Colors.greyText};
+    }
 `
