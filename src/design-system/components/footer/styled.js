@@ -80,11 +80,15 @@ export const StyledFooter = styled.footer `
         display: flex;
         justify-content: space-around;
         width: 95%;
-
+        gap: 1rem;
         border-bottom: 1px solid #CACDD8;
 
     }
 
+    .chakra-accordion__button {
+        margin-block: 4.5rem;
+        
+    }
     .footer-item {
         margin-block: 4.5rem;
         display: flex;
@@ -116,6 +120,8 @@ export const StyledFooter = styled.footer `
         justify-content: space-around;
         align-items: center;
         margin-block: 1.6rem;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 
     .social-icons {
@@ -132,5 +138,9 @@ export const StyledFooter = styled.footer `
 
     .subfooter .copyright p {
         color: ${Colors.greyText};
+    }
+
+    @media (max-width: 768px) {
+
     }
 `
