@@ -16,7 +16,7 @@ import {
     FaCcVisa,
     FaCcMastercard,
     FaCcDiscover
-} from 'react-icons/Fa'
+} from 'react-icons/fa'
 import { SiAmericanexpress } from 'react-icons/si'
 
 export default function Footer() {
