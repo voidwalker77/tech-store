@@ -78,7 +78,7 @@ export default function Footer() {
     const renderFooter = () => {
         const fullWidth = window.innerWidth
 
-        if (fullWidth >= 1024) {
+        if (fullWidth >= 900) {
             return (
                 <div className="wrapper">
                     <div className="footer-item">
@@ -134,33 +134,116 @@ export default function Footer() {
             )
 
         }
-        else if (fullWidth <= 1024) {
+        else if (fullWidth <= 900) {
             return (
-                <div className="wrapper">
-                    <Accordion defaultIndex={[0]} allowMultiple>
-                        <AccordionItem>
-                            <h4>
-                                <AccordionButton>
-                                    Information
-                                    <AccordionIcon />
-                                </AccordionButton>
-                            </h4>
-                            <AccordionPanel pb={4}>
-                                <div className="footer-item">
+                <>
+                    <div className="wrapper">
+                        <Accordion defaultIndex={[1]} allowMultiple>
+                            <AccordionItem>
+                                <h4>
+                                    <AccordionButton>
+                                        Information
+                                        <AccordionIcon />
+                                    </AccordionButton>
+                                </h4>
+                                <AccordionPanel pb={4}>
+                                    <div className="footer-item">
 
-                                    {
-                                        footerItemsInfo.map((footerItemsInfo, key) => {
-                                            return (
-                                                <a href="#" key={key}>{footerItemsInfo}</a>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </AccordionPanel>
-                        </AccordionItem>
-                    </Accordion>
-                    
-                </div>
+                                        {
+                                            footerItemsInfo.map((footerItemsInfo, key) => {
+                                                return (
+                                                    <a href="#" key={key}>{footerItemsInfo}</a>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+                        
+                        <Accordion defaultIndex={[1]} allowMultiple>
+                            <AccordionItem>
+                                <h4>
+                                    <AccordionButton>
+                                        PC Parts
+                                        <AccordionIcon />
+                                    </AccordionButton>
+                                </h4>
+                                <AccordionPanel pb={4}>
+                                    <div className="footer-item">
+
+                                        {
+                                            footerItemsPCParts.map((footerItemsPCParts, key) => {
+                                                return (
+                                                    <a href="#" key={key}>{footerItemsPCParts}</a>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+
+                        <Accordion defaultIndex={[1]} allowMultiple>
+                            <AccordionItem>
+                                <h4>
+                                    <AccordionButton>
+                                        Desktop PCs
+                                        <AccordionIcon />
+                                    </AccordionButton>
+                                </h4>
+                                <AccordionPanel pb={4}>
+                                    <div className="footer-item">
+
+                                        {
+                                            footerItemsDesktop.map((footerItemsDesktop, key) => {
+                                                return (
+                                                    <a href="#" key={key}>{footerItemsDesktop}</a>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+
+                        <Accordion defaultIndex={[1]} allowMultiple>
+                            <AccordionItem>
+                                <h4>
+                                    <AccordionButton>
+                                        Laptops
+                                        <AccordionIcon />
+                                    </AccordionButton>
+                                </h4>
+                                <AccordionPanel pb={4}>
+                                    <div className="footer-item">
+
+                                        {
+                                            footerItemsLaptops.map((footerItemsLaptops, key) => {
+                                                return (
+                                                    <a href="#" key={key}>{footerItemsLaptops}</a>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+
+                        
+                        
+                    </div>
+                    <div className="footer-item mobile">
+                        <h4>Address</h4>
+                        <p>Address: 1234 Street Adress City Address, 1234</p>
+                        <p>Phones: <a onClick={copyNumber} className="clipboard" value={addressNumber}>(00) 1234 5678</a></p>
+                        <p>We are open: Monday-Thursday: 9:00 AM - 5:30 PM</p>
+                        <p>Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 11:00 AM - 5:00 PM</p>
+                        <p>Email: <a onClick={copyEmail} className="clipboard" value={email}>shop@email.com</a></p>
+                    </div>
+                </>
+                
             )
         }
     }

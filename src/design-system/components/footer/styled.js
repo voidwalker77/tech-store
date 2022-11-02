@@ -22,7 +22,14 @@ export const StyledFooter = styled.footer `
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1.4rem;
+    }
+
+    .newsletter-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .newsletter-title h1 {
@@ -80,15 +87,29 @@ export const StyledFooter = styled.footer `
         display: flex;
         justify-content: space-around;
         width: 95%;
-        gap: 1rem;
+        gap: 0rem;
         border-bottom: 1px solid #CACDD8;
 
     }
 
     .chakra-accordion__button {
-        margin-block: 4.5rem;
-        
+        background: none;
+        color: ${Colors.greyText};
+        padding-block: 1rem;
+        margin-block: 1rem;
+        border-block: 1px solid #CACDD8;
+        display: flex;
+        justify-content: space-between;
     }
+    
+    .chakra-accordion__panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: .2rem;
+    }
+
     .footer-item {
         margin-block: 4.5rem;
         display: flex;
@@ -140,7 +161,40 @@ export const StyledFooter = styled.footer `
         color: ${Colors.greyText};
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+        .wrapper {
+            flex-direction: column;
+            margin-block: 2rem;
+            border-bottom: none; 
+        }
 
+        .newsletter-input form input[type=email] {
+            width: 45vw;
+        }
+
+        .footer-item {
+            margin-block: 0rem;
+        }
+
+        .footer-item.mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            align-self: center;
+            letter-spacing: .125rem;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .subfooter {
+            max-width: 95%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-title h1 {
+            font-size: 2.6rem;
+            text-align: center;
+        }
     }
 `
