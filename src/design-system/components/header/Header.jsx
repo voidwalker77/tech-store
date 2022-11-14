@@ -1,6 +1,7 @@
 import { StyledSubHeaderNav, StyledHeader } from './styled'
 import { useState } from 'react'
 import NavbarComponent from './Navbar'
+import { Link } from "react-router-dom";
 import HamburgerMenu from './HamburgerMenu'
 
 import { RiMenu3Fill } from 'react-icons/ri'
@@ -25,7 +26,7 @@ export default function Header() {
     const navbar = () => {
         if (isActive === false) {
             return (
-                <NavbarComponent logo={<a href="home"><img className="Logo" src={Logo}/></a>}/>
+                <NavbarComponent logo={<Link to="/home" className="Link"><a><img className="Logo" src={Logo}/></a></Link>}/>
             )
         }
         else if (isActive === true) {

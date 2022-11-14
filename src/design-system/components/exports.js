@@ -1,4 +1,6 @@
 export {default as Header} from './header/Header'
 export {default as Footer} from './footer/Footer'
 export {default as AboutUs} from './About-Us/About_Us'
+export {default as FAQ} from './pages/FAQ/FAQ'
+export {default as Carousel} from './Carousel/Carousel'
 export {default as Breadcrumbs} from './breadcrumbs/Breadcrumbs'

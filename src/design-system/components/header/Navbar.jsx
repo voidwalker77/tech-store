@@ -1,5 +1,7 @@
-export default function NavbarComponent (props) {
-    
+import { Link } from "react-router-dom";
+
+export default function NavbarComponent(props) {
+
     const navbarLinks = [
         'Laptops',
         'Desktop PCs',
@@ -11,20 +13,20 @@ export default function NavbarComponent (props) {
     ]
 
     return (
-        <>  
+        <>
             {props.logo}
-            {   
-                <nav>
-                    {
-                        navbarLinks.map((navbarLinks, key) => {
-                            return(
-                                <a href="#" key={key}>{navbarLinks}</a> 
-                            )
-                        })
-                    }
-                    <button className="Button btn2">Our Deals!</button>
-                </nav>
-            }                        
+            {
+                <>
+                    <nav>
+                        {navbarLinks.map((navbarLinks, key) => {
+                            return (
+                                <a href="#" key={key}>{navbarLinks}</a>
+                            );
+                        })}
+                    </nav>
+                    <Link to="/faq"><button className="Button btn2">FAQ</button></Link>
+                </>
+            }
         </>
     )
 }

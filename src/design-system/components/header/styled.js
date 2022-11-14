@@ -197,6 +197,11 @@ export const StyledHeader = styled.div `
         transition: .2s;
         cursor: pointer;
     }
+
+    .Button p {
+        color: ${Colors.whiteText};
+    }
+
     .Header .Button:hover {
         color: ${Colors.defaultBlue};
         background: none;
