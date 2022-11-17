@@ -26,7 +26,7 @@ export default function Header() {
     const navbar = () => {
         if (isActive === false) {
             return (
-                <NavbarComponent logo={<Link to="/home" className="Link"><a><img className="Logo" src={Logo}/></a></Link>}/>
+                <NavbarComponent logo={<Link to="" className="Link"><a><img className="Logo" src={Logo}/></a></Link>}/>
             )
         }
         else if (isActive === true) {

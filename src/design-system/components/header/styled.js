@@ -12,7 +12,7 @@ export const StyledSubHeaderNav = styled.nav `
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
+        text-align: center;
 
     p {
         color: #A2A6B0; 
