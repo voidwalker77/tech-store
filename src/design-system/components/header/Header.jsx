@@ -1,6 +1,7 @@
 import { StyledSubHeaderNav, StyledHeader } from './styled'
 import { useState } from 'react'
 import NavbarComponent from './Navbar'
+import { Link } from "react-router-dom";
 import HamburgerMenu from './HamburgerMenu'
 
 import { RiMenu3Fill } from 'react-icons/ri'
@@ -25,7 +26,7 @@ export default function Header() {
     const navbar = () => {
         if (isActive === false) {
             return (
-                <NavbarComponent logo={<a href="home"><img className="Logo" src={Logo}/></a>}/>
+                <NavbarComponent logo={<Link to="/" className="Link"><a><img className="Logo" src={Logo}/></a></Link>}/>
             )
         }
         else if (isActive === true) {
@@ -58,7 +59,7 @@ export default function Header() {
         else if (fullWidth <= 1024) {
             return(
                 <>
-                    <a href="home" ><img className="Logo" src={Logo}/></a>
+                    <a href="/" ><img className="Logo" src={Logo}/></a>
                     <div className={isActive ? "search-box active" : "search-box"}>
                             <input className={isActive ? "input-alpha active" : "input-alpha"} type="text" placeholder="Type to search.." />
                             <div className={isActive ? "search-icon active" : "search-icon"}
