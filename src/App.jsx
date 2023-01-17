@@ -12,11 +12,10 @@ export default function App() {
 
 			<BrowserRouter>
 				<Header />
-					<Routes>
-						<Route path="" element={<AboutUs />} />
-						<Route path="/faq" element={<FAQ />} />
-					</Routes>
-				<Footer />
+				<Routes>
+					<Route exact path="/" element={<AboutUs />} />
+					<Route exact path="/faq" element={<FAQ />} />
+				</Routes>
 			</BrowserRouter>
 			
 		</>

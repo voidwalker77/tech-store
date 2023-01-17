@@ -23,8 +23,8 @@ export default function NavbarComponent(props) {
                                 <a href="#" key={key}>{navbarLinks}</a>
                             );
                         })}
+                        <Link to="/faq"><button className="Button btn2">FAQ</button></Link>
                     </nav>
-                    <Link to="/faq"><button className="Button btn2">FAQ</button></Link>
                 </>
             }
         </>
