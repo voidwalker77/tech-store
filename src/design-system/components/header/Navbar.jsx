@@ -25,7 +25,6 @@ export default function NavbarComponent(props) {
                         })}
                         <Link to="/faq"><button className="Button btn2">FAQ</button></Link>
                     </nav>
-                    
                 </>
             }
         </>
