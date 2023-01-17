@@ -1,5 +1,4 @@
-
-import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
+import { useState } from 'react'
 import {
 	StyledSection,
 	StyledDivTitle,
@@ -13,24 +12,22 @@ import axios from 'axios'
 
 export default function FAQ() {
 
-	let text = ''
+	const [text, setText] = useState('')
 
 	const generateText = () => {
 		
 		axios.get(url)
 		.then(response => {
-			console.log(response.data.slip.advice)
-			
+			const data = response.data.slip.advice
+			setText(data)
 		})
-		.catch(error => console(error))
-		
-		return text
+		.catch(error => console.log(error))
 	}
 
+	generateText()
 
 	return (
 		<>
-			<Breadcrumbs />
 			<StyledSection>
 				<StyledWrapperTitles>
 					<StyledDivTitle>
@@ -54,7 +51,25 @@ export default function FAQ() {
 					<p>(g) all references to currency are references to Australian dollars.</p>
 
 					<h4 className='titles'>General</h4>
-					{generateText()}
+					<div>{text}</div>
+
+					<h4 className='titles'>Quotations</h4>
+					<div>{text}</div>
+					
+					<h4 className='titles'>Prices / Taxes</h4>
+					<div>{text}</div>
+					
+					<h4 className='titles'>Terms of Payment</h4>
+					<div>{text}</div>
+
+					<h4 className='titles'>Change of Ownership</h4>
+					<div>{text}</div>
+
+					<h4 className='titles'>Information on the Products supplied</h4>
+					<div>{text}</div>
+
+					<h4 className='titles'>Delivery</h4>
+					<div>{text}</div>
 				</StyledMainContentWrapper>
 			</StyledSection>
 		</>

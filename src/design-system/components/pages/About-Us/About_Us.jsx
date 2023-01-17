@@ -3,9 +3,7 @@ import {
     StyledCarouselContainer,
     StyledCardSection
 } from './styled'
-import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
 import Carousel from './Carousel/Carousel'
-import Footer from '../../footer/Footer'
 
 import BlackScreenImg1 from '../../../utils/theme/img/AboutUs_BlackScreen_1.svg'
 import BlackScreenImg2 from '../../../utils/theme/img/AboutUs_BlackScreen_2.svg'
@@ -23,7 +21,6 @@ export default function AboutUs() {
 
     return (
         <>
-            <Breadcrumbs />
 
             <StyledSection>
                 <h1 className="main-title">About Us</h1>
@@ -103,8 +100,6 @@ export default function AboutUs() {
                 </div>
 
             </StyledCardSection>
-
-            <Footer />
         </>
     )
 }
