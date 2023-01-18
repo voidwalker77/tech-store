@@ -5,12 +5,25 @@ import {
 	StyledDivSubTitle,
 	StyledWrapperTitles,
 	StyledMainContentWrapper,
+	StyledFAQWrapper,
+	StyledAsideMenu,
 } from './styled'
 
 import url from '../../../api/api'
 import axios from 'axios'
 
 export default function FAQ() {
+
+	const asideItems = [
+		'General',
+		'Quotations',
+		'Prices / Taxes',
+		'Terms of Payment',
+		'Credit Accounts',
+		'Change of Ownership',
+		'Information on the Products supplied',
+		'Delivery'
+	]
 
 	const [text, setText] = useState('')
 
@@ -28,15 +41,18 @@ export default function FAQ() {
 
 	return (
 		<>
+		<StyledFAQWrapper>
 			<StyledSection>
 				<StyledWrapperTitles>
 					<StyledDivTitle>
 						<h1>Shop Terms & Conditions</h1>
 					</StyledDivTitle>
+
 					<StyledDivSubTitle>
 						<h2>GENERAL TERMS AND CONDITIONS FOR SALE OF PRODUCTS AND SERVICES</h2>
 					</StyledDivSubTitle>
 				</StyledWrapperTitles>
+
 				<StyledMainContentWrapper>
 					<h4>Definitions & Interpretation</h4>
 
@@ -69,9 +85,24 @@ export default function FAQ() {
 					<div>{text}</div>
 
 					<h4 className='titles'>Delivery</h4>
-					<div>{text}</div>
+					<div className='lastText'>{text}</div>
 				</StyledMainContentWrapper>
 			</StyledSection>
+
+			<StyledAsideMenu>
+				<h4>Definitions & Interpretation</h4>
+
+				{asideItems.map((asideItems, key) => {
+                            return (
+                                <>
+                                    <a href="#" key={key} className='asideItems'>{asideItems}</a>
+                                </>
+                            )
+						})}
+
+			</StyledAsideMenu>
+		</StyledFAQWrapper>
+			
 		</>
 	)
 }
