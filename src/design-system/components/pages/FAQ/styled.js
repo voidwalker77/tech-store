@@ -6,13 +6,12 @@ import {
 export const StyledFAQWrapper = styled.div`
     max-width: 100%;
     margin-inline: 5.5vw;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 `
 export const StyledSection = styled.section`
-    max-width: 55%;
+    max-width: 65%;
 `
 export const StyledWrapperTitles = styled.div`
 
@@ -36,11 +35,20 @@ export const StyledMainContentWrapper = styled.div`
 export const StyledAsideMenu = styled.aside`
     display: flex;
     flex-direction: column;
+    position: fixed;
+    right: 5.5vw;
+    z-index: -1;
     max-height: 40vh;
     padding: 2rem;
     background-color: ${Colors.carouselBackground};
 
-    .asideItems {
+    .asideItems a{
         line-height: 3rem;
+        color: black;
+    }
+
+    .asideItems:hover {
+        transform: scale(1.025);
+        transition: .075s;
     }
 `
