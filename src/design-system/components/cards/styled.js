@@ -7,6 +7,8 @@ export const StyledCards = styled.section`
     height: 100%;
     width: 100%;
     background: ${Colors.carouselBackground};
+    z-index: 500;
+    position: relative;
 
     .wrapper {
         display: flex;

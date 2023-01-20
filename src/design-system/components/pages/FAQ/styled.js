@@ -14,10 +14,23 @@ export const StyledFAQWrapper = styled.div`
         position: fixed;
         right: 0.5vw;
         bottom: 3%;
+        background-color: ${Colors.defaultBlue};
+        border-radius: 100%;
+
+        cursor: pointer;
+    }
+
+    > svg path {
+        fill: white;
     }
 
     @media (max-width: 1024px) {
         margin-inline: 4vw;
+
+        > svg{
+            z-index: 750;
+            
+        }    
     }
 `
 export const StyledSection = styled.section`
@@ -51,10 +64,22 @@ export const StyledAsideMenu = styled.aside`
     flex-direction: column;
     position: fixed;
     right: 5.5vw;
-    z-index: -1;
+    z-index: 0;
     max-height: 40vh;
     padding: 2rem;
     background-color: ${Colors.carouselBackground};
+
+    @media (max-width: 1024px) {
+        position: static;
+        background-color: initial;
+        right: initial;
+        max-height: initial;
+        padding: initial;
+
+        .asideItems a {
+            line-height: 1rem;
+        }
+    }
 
     .asideItems a{
         line-height: 3rem;

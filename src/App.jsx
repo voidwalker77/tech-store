@@ -15,14 +15,16 @@ export default function App() {
 			<BrowserRouter>
 				<Header />
 				<Breadcrumbs />
+
 				<Routes>
 					<Route exact path="/" element={<AboutUs />} />
 					<Route exact path="/faq" element={<FAQ />} />
 				</Routes>
+				
 				<Cards />
 				<Footer />
 			</BrowserRouter>
-			
+
 		</>
 	)
 }

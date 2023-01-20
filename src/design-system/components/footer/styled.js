@@ -9,6 +9,8 @@ export const StyledFooter = styled.footer `
     flex-direction: column;
     align-items: center;
     padding-top: 4rem;
+    z-index: 1000;
+    position: relative;
     flex-wrap: wrap;
     background-color: ${Colors.black};
     color: ${Colors.whiteText};

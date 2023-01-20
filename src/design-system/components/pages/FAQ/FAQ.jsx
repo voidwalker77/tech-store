@@ -14,6 +14,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
+import Fade from '@mui/material/Fade';
 
 import url from '../../../api/api'
 import axios from 'axios'
@@ -21,13 +23,13 @@ import axios from 'axios'
 export default function FAQ() {
 
 	const asideItems = [
-		<><a href="#General">General</a></>,
-		<><a href="#Quotations">Quotations</a></>,
-		<><a href="#PricesTaxes">Prices / Taxes</a></>,
-		<><a href="#Payment">Terms of Payment</a></>,
-		<><a href="#Ownership">Change of Ownership</a></>,
-		<><a href="#Information">Information on the Products supplied</a></>,
-		<><a href="#Delivery">Delivery</a></>,
+		<a href="#General">General</a>,
+		<a href="#Quotations">Quotations</a>,
+		<a href="#PricesTaxes">Prices / Taxes</a>,
+		<a href="#Payment">Terms of Payment</a>,
+		<a href="#Ownership">Change of Ownership</a>,
+		<a href="#Information">Information on the Products supplied</a>,
+		<a href="#Delivery">Delivery</a>,
 	]
 
 	const [text, setText] = useState('')
@@ -54,7 +56,6 @@ export default function FAQ() {
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'column',
-		lineHeight: '4.5rem',
 		position: 'absolute',
 		top: '50%',
 		left: '50%',
@@ -123,10 +124,10 @@ export default function FAQ() {
 						<StyledAsideMenu>
 							<h4>Definitions & Interpretation</h4>
 
-							{asideItems.map((asideItems, key) => {
+							{asideItems.map((asideItems, keyAside) => {
 								return (
 									<>
-										<div key={key} className='asideItems'>{asideItems}</div>
+										<div key={keyAside} className='asideItems'>{asideItems}</div>
 									</>
 								)
 							})}
@@ -194,24 +195,48 @@ export default function FAQ() {
 							onClose={handleClose}
 							aria-labelledby="modal-modal-title"
 							aria-describedby="modal-modal-description"
+							closeAfterTransition
+							BackdropComponent={Backdrop}
+							BackdropProps={{
+								timeout: 500,
+							}}
 						>
-							<Box sx={style} >
-								<Typography id="modal-modal-title" variant="h4" component="h4">
-									Definitions & Interpretation
-								</Typography>
-								{asideItems.map((asideItems) => {
-									return (
-										<>
-											<div className='asideItems'>{asideItems}</div>
+							<Fade in={open}>
+								<Box sx={style} >
+									<Typography id="modal-modal-title" variant="h4" component="h4" sx={{
+										lineHeight: "5rem"
+									}}>
+										Definitions & Interpretation
+									</Typography>
+									<Typography id="modal-modal-title" variant="h6" component="h6" sx={{
+										lineHeight: "3rem",
+										textAlign: "center",
+										fontSize: "1.7rem"
+									}}>
+										{asideItems.map((asideItems, keyAnotherAside) => {
+											return (
+												<StyledAsideMenu>
+													<div key={keyAnotherAside} className='asideItems'>
+														{asideItems}
+													</div>
+												</StyledAsideMenu>
+											)
+										})}
+									</Typography>
 
-										</>
-									)
-								})}
-								<Button variant="contained" color="success" size="25">
-									Success
-								</Button>
-							</Box>
+									<Button variant="outlined" color="error" onClick={handleClose} sx={{
+										fontSize: 16,
+										height: "8%",
+										width: "60%",
+										marginTop: "3rem",
+										color: 'success',
+									}}>
+										CLOSE
+									</Button>
+								</Box>
+							</Fade>
 						</Modal>
+
 
 					</StyledFAQWrapper>
 				</>
