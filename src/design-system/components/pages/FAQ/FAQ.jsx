@@ -10,13 +10,18 @@ import {
 	StyledAsideMenu,
 } from './styled'
 
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
 import url from '../../../api/api'
 import axios from 'axios'
 
 export default function FAQ() {
 
 	const asideItems = [
-		<a href="#General">General</a>,
+		<><a href="#General">General</a></>,
 		<><a href="#Quotations">Quotations</a></>,
 		<><a href="#PricesTaxes">Prices / Taxes</a></>,
 		<><a href="#Payment">Terms of Payment</a></>,
@@ -38,6 +43,28 @@ export default function FAQ() {
 	}
 
 	generateText()
+
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
+
+
+	const style = {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+		lineHeight: '4.5rem',
+		position: 'absolute',
+		top: '50%',
+		left: '50%',
+		transform: 'translate(-50%, -50%)',
+		width: "100%",
+		height: '100%',
+		bgcolor: 'background.paper',
+		boxShadow: 24,
+		p: 4,
+	};
 
 	const handleScreenSize = () => {
 		const fullWidth = window.innerWidth
@@ -105,7 +132,7 @@ export default function FAQ() {
 							})}
 
 						</StyledAsideMenu>
-						
+
 					</StyledFAQWrapper>
 				</>
 			)
@@ -161,8 +188,31 @@ export default function FAQ() {
 							</StyledMainContentWrapper>
 						</StyledSection>
 
-						<CgMenuRound size={45} color={'#020202'} />
-						
+						<CgMenuRound size={45} color={'#020202'} onClick={handleOpen} />
+						<Modal
+							open={open}
+							onClose={handleClose}
+							aria-labelledby="modal-modal-title"
+							aria-describedby="modal-modal-description"
+						>
+							<Box sx={style} >
+								<Typography id="modal-modal-title" variant="h4" component="h4">
+									Definitions & Interpretation
+								</Typography>
+								{asideItems.map((asideItems) => {
+									return (
+										<>
+											<div className='asideItems'>{asideItems}</div>
+
+										</>
+									)
+								})}
+								<Button variant="contained" color="success" size="25">
+									Success
+								</Button>
+							</Box>
+						</Modal>
+
 					</StyledFAQWrapper>
 				</>
 			)
