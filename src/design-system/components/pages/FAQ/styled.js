@@ -9,9 +9,23 @@ export const StyledFAQWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    > svg{
+        position: fixed;
+        right: 0.5vw;
+        bottom: 3%;
+    }
+
+    @media (max-width: 1024px) {
+        margin-inline: 4vw;
+    }
 `
 export const StyledSection = styled.section`
     max-width: 65%;
+
+    @media (max-width: 1024px) {
+        max-width: 100%;
+    }
 `
 export const StyledWrapperTitles = styled.div`
 

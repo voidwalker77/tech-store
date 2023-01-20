@@ -10,7 +10,6 @@ export const StyledFooter = styled.footer `
     align-items: center;
     padding-top: 4rem;
     flex-wrap: wrap;
-
     background-color: ${Colors.black};
     color: ${Colors.whiteText};
 

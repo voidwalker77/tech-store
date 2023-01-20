@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CgMenuRound } from 'react-icons/cg'
 import {
 	StyledSection,
 	StyledDivTitle,
@@ -15,7 +16,7 @@ import axios from 'axios'
 export default function FAQ() {
 
 	const asideItems = [
-		<><a href="#General">General</a></>,
+		<a href="#General">General</a>,
 		<><a href="#Quotations">Quotations</a></>,
 		<><a href="#PricesTaxes">Prices / Taxes</a></>,
 		<><a href="#Payment">Terms of Payment</a></>,
@@ -98,12 +99,13 @@ export default function FAQ() {
 							{asideItems.map((asideItems, key) => {
 								return (
 									<>
-										<a href="#" key={key} className='asideItems'>{asideItems}</a>
+										<div key={key} className='asideItems'>{asideItems}</div>
 									</>
 								)
 							})}
 
 						</StyledAsideMenu>
+						
 					</StyledFAQWrapper>
 				</>
 			)
@@ -159,6 +161,7 @@ export default function FAQ() {
 							</StyledMainContentWrapper>
 						</StyledSection>
 
+						<CgMenuRound size={45} color={'#020202'} />
 						
 					</StyledFAQWrapper>
 				</>
@@ -168,10 +171,7 @@ export default function FAQ() {
 
 	return (
 		<>
-
 			{handleScreenSize()}
-
-
 		</>
 	)
 }
