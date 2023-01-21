@@ -84,9 +84,9 @@ export default function Footer() {
                     <div className="footer-item">
                         <h4>Information</h4>
                         {
-                            footerItemsInfo.map((footerItemsInfo, key) => {
+                            footerItemsInfo.map((footerItemsInfo, key2) => {
                                 return (
-                                    <a href="#" key={key}>{footerItemsInfo}</a>
+                                    <a href="#" key={key2}>{footerItemsInfo}</a>
                                 )
                             })
                         }
@@ -94,9 +94,9 @@ export default function Footer() {
                     <div className="footer-item">
                         <h4>PC Parts</h4>
                         {
-                            footerItemsPCParts.map((footerItemsPCParts, key) => {
+                            footerItemsPCParts.map((footerItemsPCParts, key3) => {
                                 return (
-                                    <a href="#" key={key}>{footerItemsPCParts}</a>
+                                    <a href="#" key={key3}>{footerItemsPCParts}</a>
                                 )
                             })
                         }
@@ -104,9 +104,9 @@ export default function Footer() {
                     <div className="footer-item">
                         <h4>Desktop PCs</h4>
                         {
-                            footerItemsDesktop.map((footerItemsDesktop, key) => {
+                            footerItemsDesktop.map((footerItemsDesktop, key4) => {
                                 return (
-                                    <a href="#" key={key}>{footerItemsDesktop}</a>
+                                    <a href="#" key={key4}>{footerItemsDesktop}</a>
                                 )
                             })
                         }
@@ -114,9 +114,9 @@ export default function Footer() {
                     <div className="footer-item">
                         <h4>Laptops</h4>
                         {
-                            footerItemsLaptops.map((footerItemsLaptops, key) => {
+                            footerItemsLaptops.map((footerItemsLaptops, key5) => {
                                 return (
-                                    <a href="#" key={key}>{footerItemsLaptops}</a>
+                                    <a href="#" key={key5}>{footerItemsLaptops}</a>
                                 )
                             })
                         }
@@ -150,9 +150,9 @@ export default function Footer() {
                                     <div className="footer-item">
 
                                         {
-                                            footerItemsInfo.map((footerItemsInfo, key) => {
+                                            footerItemsInfo.map((footerItemsInfo, key6) => {
                                                 return (
-                                                    <a href="#" key={key}>{footerItemsInfo}</a>
+                                                    <a href="#" key={key6}>{footerItemsInfo}</a>
                                                 )
                                             })
                                         }
@@ -173,9 +173,9 @@ export default function Footer() {
                                     <div className="footer-item">
 
                                         {
-                                            footerItemsPCParts.map((footerItemsPCParts, key) => {
+                                            footerItemsPCParts.map((footerItemsPCParts, key7) => {
                                                 return (
-                                                    <a href="#" key={key}>{footerItemsPCParts}</a>
+                                                    <a href="#" key={key7}>{footerItemsPCParts}</a>
                                                 )
                                             })
                                         }
@@ -196,9 +196,9 @@ export default function Footer() {
                                     <div className="footer-item">
 
                                         {
-                                            footerItemsDesktop.map((footerItemsDesktop, key) => {
+                                            footerItemsDesktop.map((footerItemsDesktop, key8) => {
                                                 return (
-                                                    <a href="#" key={key}>{footerItemsDesktop}</a>
+                                                    <a href="#" key={key8}>{footerItemsDesktop}</a>
                                                 )
                                             })
                                         }
@@ -219,9 +219,9 @@ export default function Footer() {
                                     <div className="footer-item">
 
                                         {
-                                            footerItemsLaptops.map((footerItemsLaptops, key) => {
+                                            footerItemsLaptops.map((footerItemsLaptops, key9) => {
                                                 return (
-                                                    <a href="#" key={key}>{footerItemsLaptops}</a>
+                                                    <a href="#" key={key9}>{footerItemsLaptops}</a>
                                                 )
                                             })
                                         }

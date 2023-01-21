@@ -52,6 +52,7 @@ export const StyledCarousel = styled.main `
 
         border: 2px solid ${Colors.defaultBlue};
         border-radius: 50px;
+        background-color: none;
         margin-top: 6.4rem;
         z-index: 50000000;
 

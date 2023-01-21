@@ -1,11 +1,8 @@
 import {
     StyledSection,
     StyledCarouselContainer,
-    StyledCardSection
 } from './styled'
-import Breadcrumbs from '../../breadcrumbs/Breadcrumbs'
 import Carousel from './Carousel/Carousel'
-import Footer from '../../footer/Footer'
 
 import BlackScreenImg1 from '../../../utils/theme/img/AboutUs_BlackScreen_1.svg'
 import BlackScreenImg2 from '../../../utils/theme/img/AboutUs_BlackScreen_2.svg'
@@ -23,7 +20,6 @@ export default function AboutUs() {
 
     return (
         <>
-            <Breadcrumbs />
 
             <StyledSection>
                 <h1 className="main-title">About Us</h1>
@@ -82,29 +78,6 @@ export default function AboutUs() {
                 <Carousel />
             </StyledCarouselContainer>
 
-            <StyledCardSection>
-
-                <div className="wrapper">
-                    <div className="subfooter-card">
-                        <img src={Support} />
-                        <h3>Product Support</h3>
-                        <p>Up to 3 years on-site warranty available for your peace of mind.</p>
-                    </div>
-                    <div className="subfooter-card">
-                        <img src={Account} />
-                        <h3>Personal Account</h3>
-                        <p>With big discounts, free delivery and a dedicated support specialist.</p>
-                    </div>
-                    <div className="subfooter-card">
-                        <img src={Saving} />
-                        <h3>Amazing Savings</h3>
-                        <p>Up to 70% off new Products, you can be sure of the best price.</p>
-                    </div>
-                </div>
-
-            </StyledCardSection>
-
-            <Footer />
         </>
     )
 }
