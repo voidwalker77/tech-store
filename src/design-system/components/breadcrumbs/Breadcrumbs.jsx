@@ -16,7 +16,7 @@ export default function Breadcrumbs() {
                         breadcrumbs.map((breadcrumbs, keyBreadcrumbs) => {
                             return (
                                 <>
-                                    <a href="#" key={keyBreadcrumbs} value>{breadcrumbs}</a>
+                                    <a href="#" key={keyBreadcrumbs}> {breadcrumbs} </a>
                                     <RiArrowRightSLine size={18} style={{ color: '#0156FF' }} />
                                 </>
                             )
