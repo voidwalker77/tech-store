@@ -41,7 +41,7 @@ export default function ContactUs() {
 					</label>
 
 					<label>
-						<div>What's on your mind?<AiFillStar size={10} color="red" /></div>
+						<div>What's on your mind ?<AiFillStar size={10} color="red" /></div>
 						<textarea placeholder='Jot us a note and we’ll get back to you as quickly as possible'></textarea>
 					</label>
 				</form>
