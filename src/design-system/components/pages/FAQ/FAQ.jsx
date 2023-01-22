@@ -7,8 +7,8 @@ import {
 	StyledWrapperTitles,
 	StyledMainContentWrapper,
 	StyledFAQWrapper,
-	StyledAsideMenu,
 } from './styled'
+import AsideMenu from '../../aside-menu/AsideMenu'
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -22,15 +22,7 @@ import axios from 'axios'
 
 export default function FAQ() {
 
-	const asideItems = [
-		<a href="#General">General</a>,
-		<a href="#Quotations">Quotations</a>,
-		<a href="#PricesTaxes">Prices / Taxes</a>,
-		<a href="#Payment">Terms of Payment</a>,
-		<a href="#Ownership">Change of Ownership</a>,
-		<a href="#Information">Information on the Products supplied</a>,
-		<a href="#Delivery">Delivery</a>,
-	]
+	
 
 	const [text, setText] = useState('')
 
@@ -121,18 +113,7 @@ export default function FAQ() {
 							</StyledMainContentWrapper>
 						</StyledSection>
 
-						<StyledAsideMenu>
-							<h4>Definitions & Interpretation</h4>
-
-							{asideItems.map((asideItems, keyAside) => {
-								return (
-									<>
-										<div key={keyAside} className='asideItems'>{asideItems}</div>
-									</>
-								)
-							})}
-
-						</StyledAsideMenu>
+						<AsideMenu />
 
 					</StyledFAQWrapper>
 				</>
@@ -213,15 +194,7 @@ export default function FAQ() {
 										textAlign: "center",
 										fontSize: "1.7rem"
 									}}>
-										{asideItems.map((asideItems, keyAnotherAside) => {
-											return (
-												<StyledAsideMenu>
-													<div key={keyAnotherAside} className='asideItems'>
-														{asideItems}
-													</div>
-												</StyledAsideMenu>
-											)
-										})}
+										<AsideMenu />
 									</Typography>
 
 									<Button variant="outlined" color="error" onClick={handleClose} sx={{
@@ -236,7 +209,6 @@ export default function FAQ() {
 								</Box>
 							</Fade>
 						</Modal>
-
 
 					</StyledFAQWrapper>
 				</>
