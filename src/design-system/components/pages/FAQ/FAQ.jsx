@@ -184,11 +184,7 @@ export default function FAQ() {
 						>
 							<Fade in={open}>
 								<Box sx={style} >
-									<Typography id="modal-modal-title" variant="h4" component="h4" sx={{
-										lineHeight: "5rem"
-									}}>
-										Definitions & Interpretation
-									</Typography>
+									
 									<Typography id="modal-modal-title" variant="h6" component="h6" sx={{
 										lineHeight: "3rem",
 										textAlign: "center",
