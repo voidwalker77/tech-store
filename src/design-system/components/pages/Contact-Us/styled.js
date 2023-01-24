@@ -45,7 +45,7 @@ export const StyledFormWrapper = styled.section`
     form {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         width: 100%;
     }
 
@@ -63,6 +63,10 @@ export const StyledFormWrapper = styled.section`
     
     label {
         font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        padding-block: 2rem;
+        position: relative;
     }
     label.labelException1 {
         width: 100%;
@@ -96,15 +100,20 @@ export const StyledFormWrapper = styled.section`
     }
 
     input[type="text"],
-    input[type="email"],
-    input[type="number"] {
+    input[type="email"] {
         margin-top: 0.5rem;
         border: 1px solid black;
         border: 1px solid ${Colors.greyLine};
         border-radius: 0.3rem;
-        height: 5vh;
+        height: 6vh;
         padding-inline: 0.8rem;
         width: 100%;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
     }
     input::placeholder {
         color: ${Colors.greyLine};
@@ -169,6 +178,20 @@ export const StyledFormWrapper = styled.section`
         background: none;
         transition: .3s;
     }
+
+    span {
+        top: 90%;
+        position: absolute;
+        color: red;
+        font-weight: normal;
+        font-size: 1.4rem;
+        position: absolute;
+    }
+
+    span.textareaMessage {
+        top: 95%;
+    }
+   
 `
 export const StyledContactUsAsideMenuWrapper = styled.aside`
     display: flex;
