@@ -18,7 +18,23 @@ import { IoLocationOutline } from 'react-icons/io5'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import InputMask from 'react-input-mask';
+
+function PhoneInput(props) {
+	return (
+		<InputMask
+			mask='(99) 99999-9999'
+			maskPlaceholder=""
+			value={props.value}
+			onChange={props.onChange}
+
+		>
+			<input type="text" placeholder='(XX) XXXXX-XXXX' />
+		</InputMask>
+	)
+}
+
 
 const schema = yup.object({
 	name: yup.string().min(2, "Um nome deve possuir no mínimo 2 letras.").max(40, "Um nome deve possuir no máximo 40 letras.").required("Nome é obrigatório."),
@@ -28,45 +44,31 @@ const schema = yup.object({
 }).required();
 
 export default function ContactUs() {
+	
+	const handleInput = ({ target: { value } }) => setPhone(value);
 
 	const {
 		register,
 		handleSubmit,
-		watch,
-		setValue,
 		formState: { errors },
 	} = useForm({
 		resolver: yupResolver(schema)
 	});
 
 	const onSubmit = (contactData) => {
-		console.log(contactData)
+		console.log();
 	}
-
-	const phoneValue = watch('phoneNumber')
-
-	useEffect(() => {
-		setValue('phoneNumber', maskPhoneNumber(phoneValue))
-	}, [phoneValue])
-
-	console.log(errors) //apagar depois.
 
 	const [nameField, setNameField] = useState('');
 
 	const handleChange = event => {
-		const result = event.target.value.replace(/[^a-z]/gi, '');
+		const result = event.target.value.replace(/[^ a-záéíóúàèìòùãõâêîôûäëïöüç]/ig, '');
 
 		setNameField(result);
 	};
 
-	const maskPhoneNumber = (value) => {
-		if (!value) return '';
+	const [phone, setPhone] = useState('');
 
-		return value.replace(/[\D]/g, '')
-			.replace(/(\d{2})(\d)/, '($1) $2')
-			.replace(/(\d{5})(\d)/, '$1-$2')
-			.replace(/(-\d{4})(\d+?)/, '$1')
-	}
 
 	const handleScreenSize = () => {
 		const fullWidth = window.innerWidth
@@ -110,7 +112,11 @@ export default function ContactUs() {
 
 									<label className='labelException3'>
 										<div>Your Phone Number</div>
-										<input {...register("phoneNumber")} type="text" placeholder='(XX) XXXXX-XXXX' />
+
+										<PhoneInput
+											value={phone}
+											onChange={handleInput}>
+										</PhoneInput>
 									</label>
 
 									<label>
@@ -192,7 +198,7 @@ export default function ContactUs() {
 							</StyledDescription>
 
 							<StyledFormWrapper>
-							<form onSubmit={handleSubmit(onSubmit)}>
+								<form onSubmit={handleSubmit(onSubmit)}>
 									<div className="wrapperInsideForm">
 										<label className='labelException1'>
 											<div>Your Name<AiFillStar size={10} color="red" /></div>
@@ -214,7 +220,11 @@ export default function ContactUs() {
 
 									<label className='labelException3'>
 										<div>Your Phone Number</div>
-										<input {...register("phoneNumber")} type="text" placeholder='(XX) XXXXX-XXXX' />
+
+										<PhoneInput
+											value={phone}
+											onChange={handleInput}>
+										</PhoneInput>
 									</label>
 
 									<label>
