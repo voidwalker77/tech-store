@@ -1,11 +1,14 @@
 import { RiArrowRightSLine } from 'react-icons/ri'
 import { StyledBreadCrumbs } from './styled'
+import { Link } from "react-router-dom";
 
 export default function Breadcrumbs() {
 
     const breadcrumbs = [
-        'Home',
-        'About Us',
+        <Link to="/"><a>Home</a></Link>,
+        <Link to="/faq"><a>FAQ</a></Link>,
+        <Link to="/contact"><a>Contact Us</a></Link>,
+
     ]
 
     return (

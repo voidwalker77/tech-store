@@ -5,6 +5,7 @@ import Cards from './design-system/components/cards/Cards'
 import Breadcrumbs from './design-system/components/breadcrumbs/Breadcrumbs'
 import AboutUs from "./design-system/components/pages/About-Us/About_Us"
 import FAQ from "./design-system/components/pages/FAQ/FAQ"
+import ContactUs from "./design-system/components/pages/Contact-Us/ContactUs"
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
 				<Routes>
 					<Route exact path="/" element={<AboutUs />} />
 					<Route exact path="/faq" element={<FAQ />} />
+					<Route exact path="/contact" element={<ContactUs />} />
 				</Routes>
 				
 				<Cards />
