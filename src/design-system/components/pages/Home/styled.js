@@ -30,3 +30,5 @@ export const StyledHomeCarousel = styled.div`
     }
 
 `
+
+export const StyledCardCarouselHome = styled.div``

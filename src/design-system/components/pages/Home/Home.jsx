@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import {
     StyledHomeWrapper,
-    StyledHomeCarousel
+    StyledHomeCarousel,
+    StyledCardCarouselHome,
 } from './styled'
 import Slider from "react-slick";
 
 import HomeCarouselImg1 from '../../../utils/theme/img/Home_CarouselImg1.svg'
 import HomeCarouselImg2 from '../../../utils/theme/img/Home_CarouselImg2.svg'
 
-import Availability from '../../availability/Availability'
-
+import { Products } from '../../exports';
 
 export default function Home() {
 
@@ -54,6 +54,8 @@ export default function Home() {
         pauseOnHover: true,
     }
 
+    
+
     return (
         <>
             <StyledHomeWrapper>
@@ -76,7 +78,11 @@ export default function Home() {
                     <a href="#">See All New Products</a>
                 </div>
 
-                <Availability />
+                <StyledCardCarouselHome>
+
+                    <Products />
+                    
+                </StyledCardCarouselHome>
 
             </StyledHomeWrapper>
         </>
