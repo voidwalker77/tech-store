@@ -139,7 +139,7 @@ export const StyledHeader = styled.div `
         height: 9.2rem;
         max-width: 100vw;
         background-color: #fff;
-        border-bottom: 2px solid #CACDD8;
+        border-bottom: 1px solid #CACDD8;
 
         display: flex;
         justify-content: center;

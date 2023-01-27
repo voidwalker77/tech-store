@@ -10,4 +10,5 @@ export {default as AsideMenu} from './aside-menu/AsideMenu'
 export {default as Home} from './pages/Home/Home'
 export {default as Availability} from './availability/Availability'
 export {default as Products} from './products/Products'
+export {default as FirstProducts} from './firstProducts/FirstProducts'
 

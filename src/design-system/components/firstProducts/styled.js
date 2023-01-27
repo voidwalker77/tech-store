@@ -2,29 +2,29 @@ import styled from 'styled-components'
 import {
     Colors
 } from '../../utils/theme/colors'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export const StyledProductWrapper = styled.div`
-
     background: ${Colors.whiteText};
     padding: 1rem;
-    
-    #card:hover {
-        cursor: pointer;
+    display: flex;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 600px) {
+        #AsideBanner {
+            
+        }
     }
-    
-    
+
+    #card {
+        cursor: pointer;
+        width: 26vw;
+    }
+
     img {
         border: 1px solid ${Colors.carouselBackground};
         border-radius: 3%;
     }
-    @media screen and (max-width: 480px) {
-        img {
-            width: 100%;
-        }
-    }
-    
+
     p {
         color: ${Colors.greyText};
     }
@@ -34,11 +34,28 @@ export const StyledProductWrapper = styled.div`
         font-size: 1.8rem;
     }
 
-    .SliderProduct {
-        outline: none;
+    #AsideBanner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 2.8rem;
+            position: absolute;
+            color: white;
+        }
+
+        p {
+            color: white;
+            font-size: 1.6rem;
+            position: absolute;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 15%;
+        }
     }
-   
 `
+
 export const Container = styled.div`
 
     #inStock {

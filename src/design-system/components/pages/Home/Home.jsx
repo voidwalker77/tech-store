@@ -1,15 +1,21 @@
 import { useState } from 'react'
 import {
     StyledHomeWrapper,
-    StyledHomeCarousel,
+    StyledBannerCarouselHome,
     StyledCardCarouselHome,
+    StyledCommentary,
+    StyledMainProductsWrapper,
+    StyledFirstProductsSection,
 } from './styled'
 import Slider from "react-slick";
 
 import HomeCarouselImg1 from '../../../utils/theme/img/Home_CarouselImg1.svg'
-import HomeCarouselImg2 from '../../../utils/theme/img/Home_CarouselImg2.svg'
+import HomeLogoCommentary from '../../../utils/theme/img/Home_Logo_Commentary.svg'
 
-import { Products } from '../../exports';
+import { 
+    Products, 
+    FirstProducts
+} from '../../exports';
 
 export default function Home() {
 
@@ -54,12 +60,10 @@ export default function Home() {
         pauseOnHover: true,
     }
 
-    
-
     return (
         <>
             <StyledHomeWrapper>
-                <StyledHomeCarousel>
+                <StyledBannerCarouselHome>
                     <div className="container">
 
                         <Slider {...settings}>
@@ -67,11 +71,11 @@ export default function Home() {
                                 <img src={HomeCarouselImg1} />
                             </div>
                             <div className="container-slide">
-                                <img src={HomeCarouselImg2} />
+                                <img src={HomeCarouselImg1} />
                             </div>
                         </Slider>
                     </div>
-                </StyledHomeCarousel>
+                </StyledBannerCarouselHome>
 
                 <div id='newProductWrapper'>
                     <h2>New Products</h2>
@@ -83,6 +87,21 @@ export default function Home() {
                     <Products />
                     
                 </StyledCardCarouselHome>
+
+                <StyledCommentary>
+                    <div id='Commentary'>
+                        <img src={HomeLogoCommentary} />
+                        <p id='boldCommentary'>own</p>
+                        <p>it now, up to 6 months interest free</p>
+                        <p id='linkCommentary'>learn more</p>
+                    </div>
+                </StyledCommentary>
+
+                <StyledMainProductsWrapper>
+                    <StyledFirstProductsSection>
+                        <FirstProducts />
+                    </StyledFirstProductsSection>
+                </StyledMainProductsWrapper>
 
             </StyledHomeWrapper>
         </>

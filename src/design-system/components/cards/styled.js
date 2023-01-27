@@ -6,7 +6,7 @@ import {
 export const StyledCards = styled.section`    
     height: 100%;
     width: 100%;
-    background: ${Colors.carouselBackground};
+    background: ${Colors.whiteText};
     z-index: 500;
     position: relative;
 
