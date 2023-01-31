@@ -135,7 +135,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -178,7 +178,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -221,7 +221,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -264,7 +264,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -307,7 +307,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -350,7 +350,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -393,7 +393,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -436,7 +436,7 @@ export default function Products() {
                                 mt: 1,
                             }}
                         >
-                            <Typography variant="h5" component="body1" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
+                            <Typography variant="h5" component="" >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</Typography>
                         </Box>
                         <Box
                             sx={{

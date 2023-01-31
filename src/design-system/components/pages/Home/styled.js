@@ -80,8 +80,6 @@ export const StyledCommentary = styled.div`
     }
 `
 export const StyledMainProductsWrapper = styled.section`
-    display: flex;
-    flex-direction: column;
 
 `
 export const StyledFirstProductsSection = styled.section`

@@ -1,23 +1,41 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import {
     Colors
-} from '../../utils/theme/colors'
+} from '../../utils/theme/colors';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const StyledProductWrapper = styled.div`
     background: ${Colors.whiteText};
-    padding: 1rem;
+    padding-block: 2rem;
+    padding-inline: 1rem;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
 
-    @media screen and (max-width: 600px) {
-        #AsideBanner {
-            
-        }
+    .cardsWrapper {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .insideCardsWrapper {
+        display: flex;
+        gap: 2rem;
+        
     }
 
     #card {
         cursor: pointer;
-        width: 26vw;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: space-between;
+
+        img {
+            width: auto;
+        }
     }
 
     img {
@@ -52,6 +70,47 @@ export const StyledProductWrapper = styled.div`
             text-decoration: underline;
             cursor: pointer;
             margin-top: 15%;
+        }
+    }
+`
+
+export const StyledMobileProductWrapper = styled.div`
+    background: ${Colors.whiteText};
+    padding-block: 2rem;
+    padding-inline: 1rem;
+
+
+    img {
+        border: 1px solid ${Colors.carouselBackground};
+        border-radius: 3%;
+        width: auto;
+    }
+
+    p {
+        color: ${Colors.greyText};
+    }
+
+    .boldPrice {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    #AsideBanner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        h2 {
+            font-size: 2.8rem;
+            
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: black;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 `
