@@ -10,7 +10,7 @@ import { IoLogoWhatsapp } from 'react-icons/io'
 
 import Image1 from '../../../utils/theme/img/firstProducts/thirdProducts/image1.svg'
 import Image2 from '../../../utils/theme/img/firstProducts/thirdProducts/image2.svg'
-import Image3 from '../../../utils/theme/img/firstProducts/thirdProducts/Image3.svg'
+import Image3 from '../../../utils/theme/img/firstProducts/thirdProducts/image3.svg'
 import AsideBanner from '../../../utils/theme/img/firstProducts/thirdProducts/AsideBanner.svg'
 
 import Box from '@mui/material/Box';
