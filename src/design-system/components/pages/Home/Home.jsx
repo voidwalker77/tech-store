@@ -6,15 +6,27 @@ import {
     StyledCommentary,
     StyledMainProductsWrapper,
     StyledFirstProductsSection,
+    StyledCarouselContainer,
+    StyledHomeFooterLogosWrapper,
 } from './styled'
 import Slider from "react-slick";
 
+import Carousel from '../../pages/About-Us/Carousel/Carousel'
+
 import HomeCarouselImg1 from '../../../utils/theme/img/Home_CarouselImg1.svg'
 import HomeLogoCommentary from '../../../utils/theme/img/Home_Logo_Commentary.svg'
+import Img1 from '../../../utils/theme/img/homeFooterLogos/img1.svg'
+import Img2 from '../../../utils/theme/img/homeFooterLogos/img2.svg'
+import Img3 from '../../../utils/theme/img/homeFooterLogos/img3.svg'
+import Img4 from '../../../utils/theme/img/homeFooterLogos/img4.svg'
+import Img5 from '../../../utils/theme/img/homeFooterLogos/img5.svg'
+import Img6 from '../../../utils/theme/img/homeFooterLogos/img6.svg'
 
 import { 
     Products, 
-    FirstProducts
+    FirstProducts,
+    SecondProducts,
+    ThirdProducts
 } from '../../exports';
 
 export default function Home() {
@@ -100,8 +112,23 @@ export default function Home() {
                 <StyledMainProductsWrapper>
                     <StyledFirstProductsSection>
                         <FirstProducts />
+                        <SecondProducts />
+                        <ThirdProducts />
                     </StyledFirstProductsSection>
                 </StyledMainProductsWrapper>
+                
+                <StyledHomeFooterLogosWrapper>
+                    <img src={Img1} />
+                    <img src={Img2} />
+                    <img src={Img3} />
+                    <img src={Img4} />
+                    <img src={Img5} />
+                    <img src={Img6} />
+                </StyledHomeFooterLogosWrapper>
+                    
+                <StyledCarouselContainer>
+                    <Carousel />
+                </StyledCarouselContainer>
 
             </StyledHomeWrapper>
         </>

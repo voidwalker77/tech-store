@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {
     Colors
-} from '../../utils/theme/colors';
+} from '../../../utils/theme/colors';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -101,7 +101,7 @@ export const StyledMobileProductWrapper = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-bottom: 2rem;
+        margin-block: 2rem;
         h2 {
             font-size: 2.8rem;
             

@@ -11,4 +11,6 @@ export {default as Home} from './pages/Home/Home'
 export {default as Availability} from './availability/Availability'
 export {default as Products} from './products/Products'
 export {default as FirstProducts} from './firstProducts/FirstProducts'
+export {default as SecondProducts} from './firstProducts/secondProducts/SecondProducts'
+export {default as ThirdProducts} from './firstProducts/thirdProducts/ThirdProducts'
 

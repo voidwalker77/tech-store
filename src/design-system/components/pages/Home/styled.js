@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const StyledHomeWrapper = styled.div`
     margin-inline: 5.5vw;
-
+    
     #newProductWrapper {
         display: flex;
         align-items: center;
@@ -83,6 +83,22 @@ export const StyledMainProductsWrapper = styled.section`
 
 `
 export const StyledFirstProductsSection = styled.section`
+background-color: white;
 
+`
 
+export const StyledCarouselContainer = styled.article`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 6rem;
+`
+
+export const StyledHomeFooterLogosWrapper = styled.footer`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    text-align: center;
 `

@@ -29,7 +29,7 @@ export default function FirstProducts() {
         speed: 600,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         arrows: false,
         responsive: [
