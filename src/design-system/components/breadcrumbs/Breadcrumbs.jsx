@@ -6,6 +6,7 @@ export default function Breadcrumbs() {
 
     const breadcrumbs = [
         <Link to="/"><a>Home</a></Link>,
+        <Link to="/about-us"><a>About Us</a></Link>,
         <Link to="/faq"><a>FAQ</a></Link>,
         <Link to="/contact"><a>Contact Us</a></Link>,
 

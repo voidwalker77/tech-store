@@ -197,7 +197,7 @@ export const StyledContactUsAsideMenuWrapper = styled.aside`
     display: flex;
     flex-direction: column;
     max-height: 40vh;
-    background-color: ${Colors.carouselBackground};
+    background-color: ${Colors.whiteText};
     margin-top: 6vw;
 
     .field {

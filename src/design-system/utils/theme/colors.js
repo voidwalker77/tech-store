@@ -7,6 +7,9 @@ export const Colors = {
     searchBarBackground: "#e7eaf1",
     carouselBackground: "#F5F7FF",
     greyLine: "#CACDD8",
+    green: "#78A962",
+    red: "#C94D3F",
+    blueCommentary: "#272560",
 
     mobile: {
         background: "hsla(0, 0%, 0%, 0.983)"

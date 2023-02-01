@@ -17,7 +17,7 @@ import Modal from '@mui/material/Modal';
 import Backdrop from '@mui/material/Backdrop';
 import Fade from '@mui/material/Fade';
 
-import url from '../../../api/api'
+import {API} from '../../../api/api'
 import axios from 'axios'
 
 export default function FAQ() {
@@ -28,7 +28,7 @@ export default function FAQ() {
 
 	const generateText = () => {
 
-		axios.get(url)
+		axios.get(API.url)
 			.then(response => {
 				const data = response.data.slip.advice
 				setText(data)
