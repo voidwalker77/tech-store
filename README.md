@@ -1,5 +1,4 @@
 ### Tech Store 💻🛒
-<br/>
 
 ## Tecnologias usadas
 
